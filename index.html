@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>IoT</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <link rel="stylesheet" href="bootstrap4-toggle.min.css">
+    <link rel="stylesheet" href="ion.rangeSlider.min.css">
+    <link rel="stylesheet" href="fontawesome-5.7.0.min.css">
+
+    <script src="jquery-3.4.1.min.js"></script>
+    <script src="bootstrap.min.js"></script>
+    <script src="bootstrap4-toggle.min.js"></script>
+    <script src="ion.rangeSlider.min.js"></script>
+    <script src="loader.js"></script>
+
+    <style type="text/css">
+        #RGB {
+            height: 20px;
+            background: rgb(128, 128, 128);
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12 text-center">
+                <h1>IoT</h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12 col-sm-12 col-lg-4">
+                <div class="card">
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item d-flex justify-content-between align-items-center active">
+                            <h2>Lampu</h2>
+                            <span class="badge  badge-pill"><i class="fas fa-lightbulb fa-4x"></i></span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between">
+                            Depan
+                            <input name="led1" id="led1" type="checkbox" checked data-toggle="toggle"
+                                data-size="xs">
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between">
+                            Ruang Tamu
+                            <input name="led2" id="led2" type="checkbox" checked data-toggle="toggle"
+                                data-size="xs">
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between">
+                            Ruang Tengah
+                            <input name="led3" id="led3" type="checkbox" checked data-toggle="toggle"
+                                data-size="xs">
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+
+            <div class="col-sm-12 col-sm-12 col-lg-4">
+                <div class="card">
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item d-flex justify-content-between align-items-center active">
+                            <h2>RGB</h2>
+                            <span class="badge  badge-pill"><i id='RGB' class="fas fa-lightbulb fa-4x"></i></span>
+                        </li>
+                        <li class="list-group-item ">
+                            <input type="text" id="red" name="red" value=""
+                                data-extra-classes="irs-outline irs-primary" />
+                        </li>
+                        <li class="list-group-item">
+                            <input type="text" id="green" name="green" value=""
+                                data-extra-classes="irs-success" />
+                        </li>
+                        <li class="list-group-item">
+                            <input type="text" id="blue" data-extra-classes="irs-outline irs-primary">
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="col-sm-12 col-sm-12 col-lg-4">
+                <ul class="list-group ">
+                    <li class="list-group-item d-flex justify-content-between align-items-center active">
+                        <H2>LED</H2>
+                        <span class="badge badge-pill"><i id='LED' class="fas fa-vector-square fa-3x"></i></span>
+                    </li>
+                    <li class="list-group-item">
+                        <div class="form-group">
+                            <label for="usr">Text:</label>
+                            <input type="text" class="form-control" id="p10text" name="p10text">
+                        </div>
+                    </li>
+                    <li class="list-group-item text-center">
+                        <div class="form-group">
+                            <label for="sel1">Select Style:</label>
+                            <select class="form-control" id="p10style" name="p10style">
+                                <option value="1">Right to left</option>
+                                <option value="2">Left to right</option>
+                                <option value="3">Top to bottom</option>
+                                <option value="4">Bottom to top</option>
+                            </select>
+                        </div>
+                    </li>
+                    <li class="list-group-item text-center">
+                        <div class="form-group">
+                            <button id="btnp10" name="btnp10" type="button" class="btn btn-primary">Update</button>
+                        </div>
+                    </li>
+
+                </ul>
+
+            </div>
+
+            <div class="col-sm-12 col-sm-12 col-lg-4">
+                <ul class="list-group ">
+                    <li class="list-group-item d-flex justify-content-between align-items-center active">
+                        <H5>Internet of Things (IoT)</H5>
+                        <span class="badge badge-pill"><i class="fas fa-wifi fa-4x"></i></span>
+                    </li>
+                    <li class="list-group-item text-justify">
+                        Internet of Things (IoT) adalah suatu konsep dimana konektifitas internet dapat bertukar
+                        informasi satu sama lainnya dengan benda-benda yang ada disekelilingnya. Banyak yang memprediksi
+                        bahwa Internet of Things (IoT) merupakan “the next big thing” di dunia teknologi informasi. Hal
+                        ini dikarenakan banyak sekali potensi yang bisa dikembangkan dengan teknologi Internet of Things
+                        (IoT) tersebut.
+                    </li>
+                </ul>
+            </div>
+
+            <div class="col-sm-12 col-sm-12 col-lg-4 mt-2 mb-2">
+                <div class="card">
+                    <div class="card-header bg-primary">
+                        <h4>
+                            <i class="fas fa-wifi"></i> Speedometer
+                        </h4>
+                    </div>
+                    <div class="card-body d-flex justify-content-center">
+                        <div id="chart_div" class="d-flex justify-content-center"
+                            style="width: 400px; height: 120px;"></div>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-sm-12 col-sm-12 col-lg-4 mt-2 mb-2">
+                <div class="card">
+                    <div class="card-header bg-primary">
+                        <h4>
+                            <i class="fas fa-wifi"></i> Temp
+                        </h4>
+                    </div>
+                    <div class="card-body d-flex justify-content-center">
+                        <div id="temperatur" class="d-flex justify-content-center"
+                            style="width: 400px; height: 120px;"></div>
+                    </div>
+                </div>
+
+            </div>
+
+
+        </div> <!-- ./row -->
+    </div>
+    <script src="iot.js"></script>
+</body>
+
+</html>
